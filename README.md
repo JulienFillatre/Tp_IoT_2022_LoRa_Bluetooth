@@ -53,7 +53,7 @@ Elle récupère les données reçues via LoRa et les affiche avec la force du si
 5. **Initialisation LoRa** : Une fois les paramètres LoRa reçus, le module LoRa est initialisé avec ces paramètres.
 6. **Écoute des données LoRa** : Dans la boucle principale, le programme vérifie continuellement la réception de paquets LoRa. Lorsqu'un paquet LoRa est reçu, les données sont extraites et affichées.
 
-### Améliorations possibles
+## Améliorations possibles
 1. **Utilisation de la structure (typedef struct tcp)** :
 La structure tcp est définie pour représenter une structure de données contenant une adresse IP, un port et un mot de passe. Cela permet de regrouper ces informations connexes en une seule entité, ce qui facilite la manipulation et le passage de ces données dans le programme.
 Cette structure est utilisée pour définir le type de données tcp qui est utilisé pour créer des instances de cette structure.
@@ -62,8 +62,6 @@ Cette structure est utilisée pour définir le type de données tcp qui est util
 
 L'union rdp est utilisée pour manipuler les données soit sous forme de tableau de bytes, soit sous forme de structure de données.
 Dans ce cas, l'union permet de stocker les données sous forme de tableau de bytes (byte byteArray[union_size]), qui peut être utilisé pour une manipulation directe des données reçues via LoRa.
-En même temps, l'union permet également d'interpréter ces données sous forme de la structure tcp, ce qui permet d'accéder facilement à chaque composante des données.
-Cela offre une flexibilité dans la manipulation des données, car elles peuvent être traitées sous différentes formes selon les besoins du programme.
 
 Structure TCP à implémenter :
 ```
