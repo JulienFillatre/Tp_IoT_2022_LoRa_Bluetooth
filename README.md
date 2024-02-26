@@ -1,8 +1,5 @@
 # Tp_IoT_2022_LoRa_Bluetooth
-Ce code est réalisé par 3 étudiants : 
-    - Fillatre Julien
-    - Maussion Nino
-    - Richarté Martin
+Ce code est réalisé par 3 étudiants : Fillatre Julien, Maussion Nino et Richarté Martin
 # Documentation du Code
 
 ## Introduction
