@@ -33,7 +33,7 @@ Ce code est conçu pour être exécuté sur un ESP32. Il permet la connexion à 
 La boucle principale du code se compose des étapes suivantes :
 1. **Envoi des données MQTT**: Le code publie des données sur un topic MQTT.
 2. **Envoi des données LoRa**: Le code envoie un paquet LoRa contenant des valeurs en virgule flottante.
-### Etapes
+### Etapes :
 1. Connexion au réseau WiFi.
 2. Connexion au broker MQTT avec les identifiants spécifiés.
 3. Publication des données de configuration LoRa (fréquence, facteur d'étalement, bande passante) sur le topic MQTT.
@@ -45,7 +45,7 @@ La boucle principale du code se compose des étapes suivantes :
 2. **`loop()`** : Cette fonction gère les communications MQTT et LoRa.
 Elle récupère les données reçues via LoRa et les affiche avec la force du signal en réception.
 
-### Etapes 
+### Etapes :
 1. **Connexion au réseau WiFi** : Le programme commence par se connecter au réseau WiFi spécifié en utilisant les identifiants fournis (SSID et mot de passe).
 2. **Connexion au broker MQTT** : Ensuite, une connexion est établie avec le broker MQTT situé à l'adresse spécifiée (test.mosquitto.org) sur le port MQTT standard (1883). Le client MQTT utilise des identifiants vides pour la connexion.
 3. **Abonnement au topic MQTT** : Le client s'abonne au topic MQTT spécifié ("srt5/GEFY"), prêt à recevoir des données publiées sur ce topic.
@@ -76,6 +76,10 @@ typedef union rdp{
  byte byteArray[union_size]; /* you can use other variable types if you want. Like: a 32bit integer if you have 4 8bit variables in your struct */
 };
 rdp tcp1;
-//print de l'ip
+// print en fct de structure
+for(int i=0; i < union_size; i++)
+{
 Serial.print(tcp1.structure.ip);
+Serial.print("\t");
+};
 ```
